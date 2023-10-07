@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:google_fonts/google_fonts.dart';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,18 +8,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: Text(
-            'Class 3 Class 4',
-            style: GoogleFonts.actor(
-              textStyle: TextStyle(
-                  backgroundColor: Colors.amber,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20),
-            ),
+          body: Center(
+        child: SizedBox(
+          height: 80,
+          width: 220,
+          child: Card(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+            color: Colors.amber,
           ),
         ),
-      ),
+      )),
     );
   }
 }
