@@ -8,17 +8,26 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          body: Center(
-        child: SizedBox(
+        body: Container(
+          margin: const EdgeInsets.only(top: 150, left: 20),
+          width: 200,
           height: 80,
-          width: 220,
-          child: Card(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-            color: Colors.amber,
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(50)),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black, //New
+                  blurRadius: 25.0,
+                  offset: Offset(00, -10))
+            ],
+          ),
+          child: Container(
+            decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(50)),
+                color: Colors.red),
           ),
         ),
-      )),
+      ),
     );
   }
 }
