@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
               BoxShadow(
                   color: Colors.black, //New
                   blurRadius: 25.0,
-                  offset: Offset(00, -10))
+                  offset: Offset(00, -10)) //top
             ],
           ),
           child: Container(
