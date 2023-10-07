@@ -4,26 +4,29 @@ import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      // debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Class 3'),
-          centerTitle: true,
+          backgroundColor: Colors.green,
+          title: Text('Flutter Card'),
         ),
-        body: Center(
-          child: Text(
-            'Class 3 Class 4',
-            style: GoogleFonts.actor(
-              textStyle: TextStyle(
-                  backgroundColor: Colors.amber,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20),
-            ),
-          ),
+        body: Container(
+          padding: EdgeInsets.all(20),
+          child: TextField(
+              decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.green, width: 2),
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  hintText: 'google.com')),
         ),
       ),
     );
