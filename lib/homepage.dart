@@ -10,11 +10,30 @@ class HomePage extends StatelessWidget {
         title: const Text('Flutter Layout'),
         centerTitle: true,
       ),
-      body: Column(
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('COlumn 1'),
-          Text('COlumn 2'),
-          Text('COlumn 3'),        ],
+          Container(
+            height: 40,
+            width: 80,
+            color: Colors.amber,
+            child: Text('Column1'),     
+          ),
+              SizedBox(width: 5,),
+          Container(
+            height: 40,
+            width: 80,
+            color: Colors.amber,
+            child: Text('Column1'),
+          ),
+          SizedBox(width: 5,),
+          Container(
+            height: 40,
+            width: 80,
+            color: Colors.amber,
+            child: Text('Column1'),
+          ),
+        ],
       ),
     );
   }
