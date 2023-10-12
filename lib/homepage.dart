@@ -8,6 +8,13 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Layout'),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          Text('COlumn 1'),
+          Text('COlumn 2'),
+          Text('COlumn 3'),        ],
       ),
     );
   }
