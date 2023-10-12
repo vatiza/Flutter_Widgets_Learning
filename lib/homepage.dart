@@ -11,28 +11,29 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 40,
-            width: 80,
-            color: Colors.amber,
-            child: Text('Column1'),     
+          Padding(
+            padding: const EdgeInsets.all(20.4),
+            child: Container(
+              height: 100,
+              width: 100,
+              color: Colors.amber,
+            ),
           ),
-              SizedBox(width: 5,),
-          Container(
-            height: 40,
-            width: 80,
-            color: Colors.amber,
-            child: Text('Column1'),
-          ),
-          SizedBox(width: 5,),
-          Container(
-            height: 40,
-            width: 80,
-            color: Colors.amber,
-            child: Text('Column1'),
-          ),
+          const Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 20, right: 10),
+                child: Text('Hello World',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              Text(
+                'Bangladesh University of Buisness',
+                style: TextStyle(backgroundColor: Colors.amber),
+              ),
+            ],
+          )
         ],
       ),
     );
