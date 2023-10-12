@@ -10,31 +10,50 @@ class HomePage extends StatelessWidget {
         title: const Text('Flutter Layout'),
         centerTitle: true,
       ),
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(20.4),
-            child: Container(
-              height: 100,
-              width: 100,
-              color: Colors.amber,
+      body: Container(
+        height: 120,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.4),
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.amber,
+              ),
             ),
-          ),
-          const Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(top: 20, right: 10),
-                child: Text('Hello World',
+            const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Hello World',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-              ),
+                Text(
+                  'Bangladesh University of Buisness',
+                  style: TextStyle(backgroundColor: Colors.amber),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              DrawerHeader(child: Text('Control Panel')),
+              
               Text(
-                'Bangladesh University of Buisness',
-                style: TextStyle(backgroundColor: Colors.amber),
-              ),
+                'Home',
+              )
+              
             ],
-          )
-        ],
+          ),
+        ),
       ),
     );
   }
