@@ -5,19 +5,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Layout'),
-      ),
-      body: Column(
-        children: [
-          Text('Column 1'),
-          Text('Column2'),
-          Text('Column3'),
-        ],
+        title: const Text('Flutter Layout'),
       ),
     );
-
   }
 }
