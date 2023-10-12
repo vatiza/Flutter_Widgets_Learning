@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:layout/home_page.dart';
+import 'package:layout/homepage.dart';
 
-MyApp main() {
-  return (const MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
