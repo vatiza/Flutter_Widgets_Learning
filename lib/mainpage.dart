@@ -11,21 +11,15 @@ class MainPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Card(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          color: Colors.black,
-          elevation: 10,
-          child: SizedBox(
-            height: 150,
-            width: 260,
-            child: Image.asset(
-              'assets/img/male.png',
-              width: 10,
-              height: 10,
-            ),
-          ),
-        ),
+        child: Container(width: 300,height: 150,
+        decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(15),
+          boxShadow: [BoxShadow(color: Colors.grey.withOpacity(0.5),
+          spreadRadius: 3,
+          blurRadius: 10,
+          )]
+        ),),
+        
       ),
     );
   }
