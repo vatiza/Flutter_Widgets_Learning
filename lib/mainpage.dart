@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -50,12 +51,26 @@ class MainPage extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Icon(Icons.access_alarm),
+                          Icon(
+                            Icons.access_alarm,
+                          ),
                           Text(
                             '08:00 AM - 01:00 PM',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           )
                         ],
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 70, top: 20),
+                        child: Row(
+                          children: [
+                            Text(
+                              '\$20.25',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 25),
+                            ),
+                          ],
+                        ),
                       )
                     ],
                   ),
