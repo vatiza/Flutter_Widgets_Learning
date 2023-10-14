@@ -12,49 +12,56 @@ class MainPage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          width: 300,
-          height: 150,
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(15),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5),
-                  spreadRadius: 3,
-                  blurRadius: 10,
-                ),
-              ]),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 10, left: 10),
-            child: Column(
+            width: 300,
+            height: 150,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 3,
+                    blurRadius: 10,
+                  ),
+                ]),
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 160, top: 20),
-                      child: Text(
-                        'Dr. ABC',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 100),
-                      child: Text(
-                        'Dhanmondi,Dhaka 1209',
-                        style: TextStyle(),
-                      ),
-                    )
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 10),
+                  child: Image.asset(
+                    "assets/img/male.png",
+                    height: 70,
+                  ),
                 ),
-                Image.asset(
-                  "assets/img/male.png",
-                  height: 50,
+                const Padding(
+                  padding: EdgeInsets.only(top: 20, left: 20),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Brittany Andreoli, MD',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black),
+                      ),
+                      Text(
+                        'Otology - Gastroenterology',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w300, fontSize: 12),
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.access_alarm),
+                          Text(
+                            '08:00 AM - 01:00 PM',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 )
               ],
-            ),
-          ),
-        ),
+            )),
       ),
     );
   }
