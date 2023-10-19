@@ -24,7 +24,7 @@ class _PersonFormState extends State<PersonForm> {
           padding: const EdgeInsets.all(10),
           child: Column(
             children: [
-              Column(
+              const Column(
                 children: [
                   Padding(
                     padding: EdgeInsets.only(top: 10, bottom: 20),
@@ -37,21 +37,70 @@ class _PersonFormState extends State<PersonForm> {
                 ],
               ),
               Form(
-                  child: Column(
-                children: [
-                  TextFormField(
-                    keyboardType: TextInputType.text,
-                    decoration: InputDecoration(
-                      labelText: 'Name',
-                      hintText: 'Enter Your full Name',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        labelText: 'Name',
+                        hintText: 'Enter Your full Name',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        prefixIcon: const Icon(Icons.person),
                       ),
-                      prefixIcon: const Icon(Icons.person),
                     ),
-                  )
-                ],
-              )),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    TextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        hintText: 'Enter your email address',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        prefixIcon: const Icon(Icons.email),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    TextFormField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        labelText: 'Phone Number',
+                        hintText: 'Enter your Phone Number',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        prefixIcon: const Icon(Icons.person),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    TextFormField(
+                      obscureText: true,
+                      keyboardType: TextInputType.visiblePassword,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        hintText: 'Password',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        prefixIcon: const Icon(Icons.password),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Submit'),
+              )
             ],
           ),
         ),
