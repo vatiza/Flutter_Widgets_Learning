@@ -22,21 +22,38 @@ class _PersonFormState extends State<PersonForm> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10),
-          child: Form(
-              child: Column(
+          child: Column(
             children: [
-              TextFormField(
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(
-                    labelText: 'Name',
-                    hintText: 'Enter Your full Name',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+              Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 20),
+                    child: Text(
+                      'Fillup This Form',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                     ),
-                    prefixIcon: const Icon(Icons.person),),
-              )
+                  )
+                ],
+              ),
+              Form(
+                  child: Column(
+                children: [
+                  TextFormField(
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                      labelText: 'Name',
+                      hintText: 'Enter Your full Name',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      prefixIcon: const Icon(Icons.person),
+                    ),
+                  )
+                ],
+              )),
             ],
-          )),
+          ),
         ),
       ),
     );
