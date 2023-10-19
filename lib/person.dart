@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class PersonForm extends StatefulWidget {
   const PersonForm({super.key});
 
@@ -18,7 +19,26 @@ class _PersonFormState extends State<PersonForm> {
         backgroundColor: Colors.amber,
         centerTitle: true,
       ),
-   
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Form(
+              child: Column(
+            children: [
+              TextFormField(
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                    labelText: 'Name',
+                    hintText: 'Enter Your full Name',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    prefixIcon: const Icon(Icons.person),),
+              )
+            ],
+          )),
+        ),
+      ),
     );
   }
 }
