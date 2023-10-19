@@ -34,14 +34,19 @@ class _PersonFormState extends State<PersonForm> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                 
-                    hintText: 'Your First Name',
-                    label: const Text('First Name',style: TextStyle(fontSize: 20),),
-                    suffixIcon: const Icon(Icons.person),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                child: SizedBox(
+                  height: 40,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Your First Name',
+                      label: const Text(
+                        'First Name',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      suffixIcon: const Icon(Icons.person),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                     ),
                   ),
                 ),
@@ -49,20 +54,47 @@ class _PersonFormState extends State<PersonForm> {
               Column(
                 children: [
                   Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                  
-                    hintText: 'Your Last Name',
-                    label: const Text('Last Name',style: TextStyle(fontSize: 20),),
-                    suffixIcon: const Icon(Icons.person),
-                    border: OutlineInputBorder(
-                      
-                      borderRadius: BorderRadius.circular(20.0),
+                    padding: const EdgeInsets.all(10.0),
+                    child: SizedBox(
+                      height: 40,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Your Last Name',
+                          label: const Text(
+                            'Last Name',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          suffixIcon: const Icon(Icons.person),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 40,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'example@email.com',
+                              label: const Text(
+                                'Email',
+                                style: TextStyle(fontSize: 20),
+                              ),
+                              suffixIcon: const Icon(Icons.email),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               )
             ],
