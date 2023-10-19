@@ -19,6 +19,56 @@ class _PersonFormState extends State<PersonForm> {
         backgroundColor: Colors.amber,
         centerTitle: true,
       ),
+      body: Column(
+        children: [
+          const SizedBox(
+            height: 30,
+            child: Center(
+              child: Text(
+                'Please fillup  the form',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              ),
+            ),
+          ),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                 
+                    hintText: 'Your First Name',
+                    label: const Text('First Name',style: TextStyle(fontSize: 20),),
+                    suffixIcon: const Icon(Icons.person),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+                  Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                  
+                    hintText: 'Your Last Name',
+                    label: const Text('Last Name',style: TextStyle(fontSize: 20),),
+                    suffixIcon: const Icon(Icons.person),
+                    border: OutlineInputBorder(
+                      
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
+                ),
+              ),
+                ],
+              )
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
