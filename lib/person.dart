@@ -8,6 +8,12 @@ class PersonForm extends StatefulWidget {
 }
 
 class _PersonFormState extends State<PersonForm> {
+  final _formfield = GlobalKey<FormState>();
+  final username = TextEditingController();
+  final phonenumber = TextEditingController();
+  final emailController = TextEditingController();
+  final getpass = TextEditingController();
+  bool passToggle = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +45,10 @@ class _PersonFormState extends State<PersonForm> {
               Form(
                 child: Column(
                   children: [
+                  //! Name Field
                     TextFormField(
                       keyboardType: TextInputType.text,
+                      controller: username,  //! controller: username, 
                       decoration: InputDecoration(
                         labelText: 'Name',
                         hintText: 'Enter Your full Name',
@@ -53,8 +61,10 @@ class _PersonFormState extends State<PersonForm> {
                     const SizedBox(
                       height: 10,
                     ),
+                    //! Email Field
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
+                      controller: emailController, //! controller: emailController,
                       decoration: InputDecoration(
                         labelText: 'Email',
                         hintText: 'Enter your email address',
@@ -65,8 +75,10 @@ class _PersonFormState extends State<PersonForm> {
                       ),
                     ),
                     const SizedBox(height: 10),
+                    //! Phone Number Field
                     TextFormField(
                       keyboardType: TextInputType.number,
+                      controller: phonenumber,  //!controller: emailController,
                       decoration: InputDecoration(
                         labelText: 'Phone Number',
                         hintText: 'Enter your Phone Number',
@@ -79,9 +91,11 @@ class _PersonFormState extends State<PersonForm> {
                     const SizedBox(
                       height: 10,
                     ),
+                    // password field
                     TextFormField(
                       obscureText: true,
                       keyboardType: TextInputType.visiblePassword,
+                      controller: getpass, //! controller: getpass,
                       decoration: InputDecoration(
                         labelText: 'Password',
                         hintText: 'Password',
@@ -97,6 +111,7 @@ class _PersonFormState extends State<PersonForm> {
               const SizedBox(
                 height: 20,
               ),
+              //! SUbmit Button
               ElevatedButton(
                 onPressed: () {},
                 child: const Text('Submit'),
