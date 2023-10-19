@@ -45,10 +45,10 @@ class _PersonFormState extends State<PersonForm> {
               Form(
                 child: Column(
                   children: [
-                  //! Name Field
+                    //! Name Field
                     TextFormField(
                       keyboardType: TextInputType.text,
-                      controller: username,  //! controller: username, 
+                      controller: username, //! controller: username,
                       decoration: InputDecoration(
                         labelText: 'Name',
                         hintText: 'Enter Your full Name',
@@ -64,7 +64,8 @@ class _PersonFormState extends State<PersonForm> {
                     //! Email Field
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
-                      controller: emailController, //! controller: emailController,
+                      controller:
+                          emailController, //! controller: emailController,
                       decoration: InputDecoration(
                         labelText: 'Email',
                         hintText: 'Enter your email address',
@@ -78,7 +79,7 @@ class _PersonFormState extends State<PersonForm> {
                     //! Phone Number Field
                     TextFormField(
                       keyboardType: TextInputType.number,
-                      controller: phonenumber,  //!controller: emailController,
+                      controller: phonenumber, //!controller: emailController,
                       decoration: InputDecoration(
                         labelText: 'Phone Number',
                         hintText: 'Enter your Phone Number',
@@ -102,11 +103,25 @@ class _PersonFormState extends State<PersonForm> {
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        prefixIcon: const Icon(Icons.password),
+                        prefixIcon: const Icon(Icons.lock),
+                        suffix: InkWell(
+                          onTap: () {
+                            setState(
+                              () {
+                                passToggle = !passToggle;
+                              },
+                            );
+                          },
+                          child: Icon(passToggle
+                              ? Icons.visibility
+                              : Icons.visibility_off),
+                        ),
                       ),
                     ),
                   ],
+                
                 ),
+                
               ),
               const SizedBox(
                 height: 20,
