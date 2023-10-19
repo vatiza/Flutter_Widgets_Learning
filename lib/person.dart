@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:passwordfield/passwordfield.dart';
-
 class PersonForm extends StatefulWidget {
   const PersonForm({super.key});
 
@@ -99,36 +97,7 @@ class _PersonFormState extends State<PersonForm> {
                       //! four Password Field
                       Column(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: PasswordField(
-                              color: Colors.blue,
-                              passwordConstraint: r'.*[@$#.*].*',
-                              inputDecoration: PasswordDecoration(),
-                              hintText: 'must have special characters',
-                              border: PasswordBorder(
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Colors.blue.shade100,
-                                  ),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Colors.blue.shade100,
-                                  ),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
-                                  borderSide: BorderSide(
-                                      width: 2, color: Colors.red.shade200),
-                                ),
-                              ),
-                              errorMessage:
-                                  'must contain special character either . * @ # \$',
-                            ),
-                          ),
+                          
                           Column(
                             children: [
                               Padding(
