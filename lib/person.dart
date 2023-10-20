@@ -14,6 +14,7 @@ class _PersonFormState extends State<PersonForm> {
   final emailController = TextEditingController();
   final getpass = TextEditingController();
   bool passToggle = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +44,7 @@ class _PersonFormState extends State<PersonForm> {
                 ],
               ),
               Form(
-              key: _formfield,
+                key: _formfield,
                 child: Column(
                   children: [
                     //! Name Field
@@ -75,6 +76,18 @@ class _PersonFormState extends State<PersonForm> {
                         ),
                         prefixIcon: const Icon(Icons.email),
                       ),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'enter email';
+                        }
+                        bool emailValid = RegExp(
+                                r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                            .hasMatch(value);
+                        if (!emailValid) {
+                          return 'enter valid email';
+                        }
+                        return null;
+                      },
                     ),
                     const SizedBox(height: 10),
                     //! Phone Number Field
@@ -120,9 +133,7 @@ class _PersonFormState extends State<PersonForm> {
                       ),
                     ),
                   ],
-                
                 ),
-                
               ),
               const SizedBox(
                 height: 20,
@@ -131,11 +142,13 @@ class _PersonFormState extends State<PersonForm> {
               ElevatedButton(
                 onPressed: () {},
                 child: const Text('Submit'),
-              )
+              ),
             ],
           ),
         ),
       ),
+      drawer: Column(
+     children: [Text('data')], ),
     );
   }
 }
