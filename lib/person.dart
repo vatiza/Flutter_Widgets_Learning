@@ -147,8 +147,7 @@ class _PersonFormState extends State<PersonForm> {
           ),
         ),
       ),
-      drawer: Column(
-     children: [Text('data')], ),
+
     );
   }
 }
