@@ -27,7 +27,18 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Class 8910"),
       ),
+      //! floatingActionButton
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.call),
+        elevation: 20,
+      ),
+      
+//! bottomNavigationBar
       bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.red,
+          elevation: 10,
           currentIndex: selectedIndex,
           onTap: onTap,
           items: const <BottomNavigationBarItem>[
