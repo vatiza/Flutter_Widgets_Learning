@@ -6,9 +6,26 @@ class ListViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('List View'),
+        body: SingleChildScrollView(
+            child: Padding(
+      padding: EdgeInsets.only(left: 20, right: 20, top: 10),
+      child: ListView.builder(
+        itemCount: 101,
+        shrinkWrap: true,
+        physics: AlwaysScrollableScrollPhysics(),
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsets.only(bottom: 10),
+            child: Container(
+                height: 20,
+                color: Colors.amber,
+                child: Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Center(child: Text(' Number of List $index')),
+                )),
+          );
+        },
       ),
-    );
+    )));
   }
 }

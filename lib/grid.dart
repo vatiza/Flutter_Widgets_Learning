@@ -6,9 +6,23 @@ class GridViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Grid View'),
+        body: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GridView.count(
+        shrinkWrap: true,
+        physics: AlwaysScrollableScrollPhysics(),
+        crossAxisCount: 3,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        children: List.generate(
+            101,
+            (index) => Container(
+                  height: 20,
+                  width: 10,
+                  color: Colors.red,
+                  child: Center(child: Text('Number of Grid $index')),
+                )),
       ),
-    );
+    ));
   }
 }

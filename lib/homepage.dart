@@ -23,23 +23,32 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Work 4'),
-        backgroundColor: Colors.red,
-        centerTitle: true,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Home Work 4'),
+          backgroundColor: Colors.red,
+          centerTitle: true,
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(
+            Icons.home,
+          ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: selectedIndex,
+          selectedItemColor: Colors.red,
+          onTap: onTap,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.list), label: 'List View'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.grid_3x3), label: 'Grid View'),
+          ],
+        ),
+        body: pages[selectedIndex],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedIndex,
-        selectedItemColor: Colors.red,
-        onTap: onTap,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'List View'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.grid_3x3), label: 'Grid View'),
-        ],
-      ),
-      body: pages[selectedIndex],
     );
   }
 }
