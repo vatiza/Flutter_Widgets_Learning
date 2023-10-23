@@ -15,7 +15,12 @@ class _HomePageState extends State<HomePage> {
         title: Text("Class 8910"),
       ),
       body: Center(
-        child: Text("Hello eORLD"),
+      child: CircleAvatar(
+      
+      radius: 20,
+      backgroundColor: Colors.transparent,
+      backgroundImage: NetworkImage('http://www.influxdev.com/img/logo.png'),
+      ),
       ),
     );
   }
