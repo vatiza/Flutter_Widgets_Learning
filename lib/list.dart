@@ -18,7 +18,7 @@ class ListViewPage extends StatelessWidget {
             padding: EdgeInsets.only(bottom: 10),
             child: Container(
                 height: 20,
-                color: Colors.amber,
+                color: Colors.red,
                 child: Padding(
                   padding: const EdgeInsets.all(2.0),
                   child: Center(child: Text(' Number of List $index')),
