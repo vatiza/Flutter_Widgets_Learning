@@ -20,7 +20,10 @@ class GridViewPage extends StatelessWidget {
                   height: 20,
                   width: 10,
                   color: Colors.red,
-                  child: Center(child: Text('Number of Grid $index')),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(child: Text('Number of Grid $index')),
+                  ),
                 )),
       ),
     ));
