@@ -8,14 +8,14 @@ class ListViewPage extends StatelessWidget {
     return Scaffold(
         body: SingleChildScrollView(
             child: Padding(
-      padding: EdgeInsets.only(left: 20, right: 20, top: 10),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
       child: ListView.builder(
         itemCount: 101,
         shrinkWrap: true,
-        physics: AlwaysScrollableScrollPhysics(),
+        physics: const AlwaysScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.only(bottom: 10),
             child: Container(
                 height: 20,
                 color: Colors.red,

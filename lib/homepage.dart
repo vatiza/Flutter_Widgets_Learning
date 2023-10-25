@@ -1,6 +1,5 @@
 import 'package:bottom_navigationbar_hm78910/grid.dart';
 import 'package:bottom_navigationbar_hm78910/list.dart';
-import 'package:bottom_navigationbar_hm78910/tmp.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,7 +14,6 @@ class _HomePageState extends State<HomePage> {
   List<Widget> pages = [
     const ListViewPage(),
     const GridViewPage(),
-    TmpPage(),
   ];
   void onTap(int index) {
     setState(() {
